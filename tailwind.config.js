@@ -12,7 +12,7 @@ module.exports = {
         'contrastBackground': '#121214',
         'backgroundColor': '#18181b',
         'lightBackground': '#dff3f6',
-        'lightContrast': '#e2e2e2',
+        'lightContrast': '#b4e1f9',
       },
       fontFamily: {
         'poppins': "poppins",
