@@ -145,7 +145,7 @@ export default function Home() {
           </div>
         </section>
         {/* THIS IS THE SECTION WHERE THE SECOND PART OF THE WEBPAGE IS. */}
-        <section className="bg-lightContrast dark:bg-contrastBackground rounded-2xl w-full flex flex-col items-center p-12 justify-center gap-5 transition ease-in-out duration-200 hover:shadow-lg hover:shadow-gray-300 dark:hover:shadow-zinc-800">
+        <section className="bg-lightContrast dark:bg-contrastBackground rounded-2xl w-full flex flex-col items-center p-7 md:p-12 justify-center gap-5 transition ease-in-out duration-200 hover:shadow-lg hover:shadow-gray-300 dark:hover:shadow-zinc-800">
           {/* THIS SECTION DEALS WITH THE PERSONAL EXPERIENCE PAROGRAPH. */}
           <div>
             <h3 className="text-2xl text-black dark:text-cyan-200">
@@ -263,7 +263,7 @@ export default function Home() {
           </div>
         </section>
         <section className="mb-5 pr-8 flex justify-center md:justify-end bg-lightContrast dark:bg-contrastBackground rounded-2xl w-full p-5 transition ease-in-out duration-200 hover:shadow-lg hover:shadow-gray-300 dark:hover:shadow-zinc-800">
-          <p className="flex gap-1 items-center text-gray-800 dark:text-gray-400">
+          <p className="flex gap-1 items-center text-gray-800 dark:text-gray-400 text-xs md:text-base">
             Designed and implemented with{" "}
             <BsHeartFill className="text-red-800" /> by Sergiu.
           </p>
