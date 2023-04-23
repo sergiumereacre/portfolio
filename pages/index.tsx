@@ -60,7 +60,7 @@ export default function Home() {
       {/*THIS IS WHERE WE IDENTIFY HEAD TAG.*/}
       <Head></Head>
       {/* THIS DEALS WITH THE NAVBAR. */}
-      <nav className="py-6 md:px-24 lg:px-44 xl:px-60 2xl:px-80 px-10 bg-lightBackground dark:bg-backgroundColor">
+      <nav className="py-6 md:px-24 lg:px-44 xl:px-60 2xl:px-80 px-5 bg-lightBackground dark:bg-backgroundColor">
         <div className="p-5 rounded-2xl flex items-center justify-between bg-lightContrast dark:bg-contrastBackground transition ease-in-out duration-200 hover:shadow-lg hover:shadow-gray-300 dark:hover:shadow-zinc-800">
           <a className="w-10 h-10 lg:ml-3" href="">
             <Image src={logo} alt="Logo" />
@@ -91,7 +91,7 @@ export default function Home() {
         </div>
       </nav>
       {/* THIS IS WHERE THE MAIN SECTION BEGINS */}
-      <main className="md:px-24 lg:px-44 xl:px-60 2xl:px-80 px-10 min-h-screen bg-lightBackground dark:bg-backgroundColor flex flex-col items-center gap-10">
+      <main className="md:px-24 lg:px-44 xl:px-60 2xl:px-80 px-5 min-h-screen bg-lightBackground dark:bg-backgroundColor flex flex-col items-center gap-10">
         {/* THIS SECTION DEALS WITH THE FIRST PART OF THE WEBPAGE. */}
         <section className="bg-lightContrast dark:bg-contrastBackground rounded-2xl w-full xl:p-20 xl:gap-20 flex flex-col items-center md:flex-row p-12 justify-center gap-5 transition ease-in-out duration-200 hover:shadow-lg hover:shadow-gray-300 dark:hover:shadow-zinc-800">
           {/* THIS IS THE SECTION WHERE THE CONTENT IS. */}
@@ -145,7 +145,7 @@ export default function Home() {
           </div>
         </section>
         {/* THIS IS THE SECTION WHERE THE SECOND PART OF THE WEBPAGE IS. */}
-        <section className="bg-lightContrast dark:bg-contrastBackground rounded-2xl w-full flex flex-col items-center p-7 md:p-12 justify-center gap-5 transition ease-in-out duration-200 hover:shadow-lg hover:shadow-gray-300 dark:hover:shadow-zinc-800">
+        <section className="bg-lightContrast dark:bg-contrastBackground rounded-2xl w-full flex flex-col items-center p-8 md:p-12 justify-center gap-5 transition ease-in-out duration-200 hover:shadow-lg hover:shadow-gray-300 dark:hover:shadow-zinc-800">
           {/* THIS SECTION DEALS WITH THE PERSONAL EXPERIENCE PAROGRAPH. */}
           <div>
             <h3 className="text-2xl text-black dark:text-cyan-200">
