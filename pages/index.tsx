@@ -149,7 +149,7 @@ export default function Home() {
           {/* THIS SECTION DEALS WITH THE PERSONAL EXPERIENCE PAROGRAPH. */}
           <div>
             <h3 className="text-2xl text-black dark:text-cyan-200">
-              Professional Experience
+              Tech Enthusiast
             </h3>
             <p className="text-md leading-7 text-gray-800 dark:text-gray-400">
               From a very young age, I was inspired to design, create and mess
@@ -262,6 +262,86 @@ export default function Home() {
             </div>
           </div>
         </section>
+        {/* THIS SECTION DEALS WITH WORK EXPERIENCE */}
+        <section className="bg-lightContrast dark:bg-contrastBackground rounded-2xl w-full xl:p-20 xl:gap-20 flex flex-col md:items-center md:flex-row p-12 gap-5 transition ease-in-out duration-200 hover:shadow-lg hover:shadow-gray-300 dark:hover:shadow-zinc-800">
+          <h3 className="text-2xl text-black dark:text-cyan-200">
+            Professional Experience
+          </h3>
+          <div>
+            {/* TIMELINE OF PREVIOUS EXPERIENCE */}
+            <ol className="relative border-l border-gray-500 dark:border-yellow-400">
+              <li className="mb-10 ml-5">
+                <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-gray-400 dark:border-gray-600 dark:bg-yellow-400 animate-bounce"></div>
+                <time className="mb-1 text-sm font-normal leading-none text-gray-600 dark:text-gray-500">
+                  May 2020 - PRESENT
+                </time>
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+                  Computer Systems at the{" "}
+                  <a
+                    href="https://www.ul.ie/"
+                    className="text-green-700 dark:text-green-400 hover:animate-pulse"
+                  >
+                    University of Limerick
+                  </a>
+                </h3>
+                <p className="mb-4 text-base font-normal text-gray-800 dark:text-gray-400">
+                  Maintaining a QCA of 3.68 thus far, I am currently in my third
+                  year of studies at the University of Limerick. In my second
+                  year of studies, I had the privilege of being awarded the
+                  Huawei Seeds for the Future scholarship, which provided me
+                  with a unique opportunity to explore emerging technologies and
+                  deepen my understanding of the field.
+                </p>
+              </li>
+              <li className="mb-10 ml-5">
+                <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-gray-400 dark:border-gray-600 dark:bg-yellow-400"></div>
+                <time className="mb-1 text-sm font-normal leading-none text-gray-600 dark:text-gray-500">
+                  May 2022 - January 2023
+                </time>
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+                  Software/Hardware Engineer Intern at{" "}
+                  <a
+                    href="https://www.intel.ie/content/www/ie/en/company-overview/intel-shannon.html"
+                    className="text-blue-500  hover:animate-pulse"
+                  >
+                    Intel
+                  </a>
+                </h3>
+                <p className="mb-4 text-base font-normal text-gray-800 dark:text-gray-400">
+                  During my internship at Intel Shannon, I had the opportunity
+                  to refine my skills in Python scripting and programming, while
+                  gaining valuable hands-on experience in UVM and SystemVerilog.
+                  This experience not only enhanced my proficiency in software
+                  and hardware design but also deepened my understanding of
+                  these fields.
+                </p>
+              </li>
+              <li className="ml-5">
+                <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -left-1.5 border border-gray-400 dark:border-gray-600 dark:bg-yellow-400"></div>
+                <time className="mb-1 text-sm font-normal leading-none text-gray-600 dark:text-gray-500">
+                  August 2017 - January 2018
+                </time>
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+                  Consultant Internship at{" "}
+                  <a
+                    href="https://www.echoit.ie/"
+                    className="text-indigo-700 hover:animate-pulse"
+                  >
+                    Echo I.T.
+                  </a>
+                </h3>
+                <p className="text-base font-normal text-gray-800 dark:text-gray-400">
+                  As part of a team of engineers and technicians, I collaborated
+                  on providing technical assistance and support to customers.
+                  Through this experience, I gained valuable insights into the
+                  operations of a small business and deepened my understanding
+                  of its inner workings.
+                </p>
+              </li>
+            </ol>
+          </div>
+        </section>
+        {/* THIS SECTION DEALS WITH THE FOOTER */}
         <section className="mb-5 pr-8 flex justify-center md:justify-end bg-lightContrast dark:bg-contrastBackground rounded-2xl w-full p-5 transition ease-in-out duration-200 hover:shadow-lg hover:shadow-gray-300 dark:hover:shadow-zinc-800">
           <p className="flex gap-1 items-center text-gray-800 dark:text-gray-400 text-xs md:text-base">
             Designed and implemented with{" "}
