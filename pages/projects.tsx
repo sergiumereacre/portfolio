@@ -203,7 +203,7 @@ function Projects(props: ProjectsProps) {
                                 During my college course, I collaborated with my peers to develop a mobile application that utilizes machine learning to identify animals from images. I took charge of the frontend development of the application using Figma and Android Studio, and successfully implemented all the necessary components.
                             </p>
                             <p className="text-gray-800 dark:text-gray-400">
-                                By applying Google's Material Design language, I was able to create an impressive user interface while using Android Studio. As part of my responsibilities, I also integrated the Camera API into our application, which was a significant learning experience for me. Through this process, I gained a deeper understanding of how Android apps utilize the phone's camera, and how to effectively implement it into our application.
+                                By applying Google&apos;s Material Design language, I was able to create an impressive user interface while using Android Studio. As part of my responsibilities, I also integrated the Camera API into our application, which was a significant learning experience for me. Through this process, I gained a deeper understanding of how Android apps utilize the phone&apos;s camera, and how to effectively implement it into our application.
                             </p>
                             <div className="my-3 flex flex-row items-center gap-2">
                                 <h4 className="text-gray-800 dark:text-gray-200">Tools used:</h4>
