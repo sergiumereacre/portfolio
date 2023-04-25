@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import Head from "./head";
 import Image from "next/image";
+import Link from "next/link";
 import logo from "../public/s.png";
 import code from "../public/code.png";
 import design from "../public/design.png";
@@ -10,6 +11,8 @@ import profile from "../public/profile.png";
 import { BsFillMoonStarsFill, BsHeartFill } from "react-icons/bs";
 import { MdWbSunny } from "react-icons/md";
 import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
+import { BsPersonFillAdd } from "react-icons/bs";
+import { FaSuitcase } from "react-icons/fa";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(true);
@@ -62,9 +65,9 @@ export default function Home() {
       {/* THIS DEALS WITH THE NAVBAR. */}
       <nav className="py-6 md:px-24 lg:px-44 xl:px-60 2xl:px-80 px-5 bg-lightBackground dark:bg-backgroundColor">
         <div className="p-5 rounded-2xl flex items-center justify-between bg-lightContrast dark:bg-contrastBackground transition ease-in-out duration-200 hover:shadow-lg hover:shadow-gray-300 dark:hover:shadow-zinc-800">
-          <a className="w-10 h-10 lg:ml-3" href="">
+          <Link className="w-10 h-10 lg:ml-3" href="/">
             <Image src={logo} alt="Logo" />
-          </a>
+          </Link>
           {/* BUTTONS FOR DARK MODE AND LETS CONNECT */}
           <ul className="flex items-center lg:mr-3">
             <li>
@@ -79,12 +82,36 @@ export default function Home() {
                 className={`${baseClassNameSun} ${darkMode ? "" : "hidden"}`}
               />
             </li>
-            <li>
+            <li className="hidden md:inline">
+              <Link
+                className="transition-all duration-600 bg-gradient-to-br to-cyan-600 via-orange-500 from-pink-900 bg-size-200 text-white px-4 py-2 rounded-md ml-4 font-poppins hover:bg-right-bottom"
+                href="/projects"
+              >
+                Projects
+              </Link>
+            </li>
+            <li className="md:hidden">
+              <Link
+                className="transition-all duration-600 bg-gradient-to-br to-cyan-600 via-orange-500 from-pink-900 bg-size-200 text-white flex items-center px-4 py-2 rounded-md ml-4 font-poppins hover:bg-right-bottom"
+                href="/projects"
+              >
+                <FaSuitcase className="inline text-2xl"></FaSuitcase>
+              </Link>
+            </li>
+            <li className="hidden md:inline">
               <a
-                className="transition-all duration-600 bg-gradient-to-br to-teal-600 via-blue-700 from-cyan-700 bg-size-200 text-white px-4 py-2 rounded-md ml-8 font-poppins hover:bg-right-bottom"
+                className="transition-all duration-600 bg-gradient-to-br to-orange-600 via-blue-700 from-teal-600 bg-size-200 text-white px-4 py-2 rounded-md ml-4 font-poppins hover:bg-right-bottom"
                 href="https://www.linkedin.com/in/sergiumereacre"
               >
                 Let&apos;s Connect
+              </a>
+            </li>
+            <li className="md:hidden">
+              <a
+                className="transition-all duration-600 bg-gradient-to-br to-orange-600 via-blue-700 from-teal-600 bg-size-200 text-white flex items-center px-4 py-2 rounded-md ml-4 font-poppins hover:bg-right-bottom"
+                href="https://www.linkedin.com/in/sergiumereacre"
+              >
+                <BsPersonFillAdd className="inline text-2xl"></BsPersonFillAdd>
               </a>
             </li>
           </ul>
