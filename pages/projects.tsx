@@ -10,11 +10,11 @@ import { BsPersonFillAdd } from "react-icons/bs";
 
 // Importing images
 import logo from "../public/s.png";
-import AK1 from "../public/ak1.png";
-import AK2 from "../public/ak2.png";
-import AK3 from "../public/ak3.png";
-import AK4 from "../public/ak4.png";
-import AK5 from "../public/ak5.png";
+import AK1 from "../public/AK1.png";
+import AK2 from "../public/AK2.png";
+import AK3 from "../public/AK3.png";
+import AK4 from "../public/AK4.png";
+import AK5 from "../public/AK5.png";
 import YTD from "../public/ytd.png";
 import Zork1 from "../public/zork1.png";
 import Zork2 from "../public/zork2.png";
