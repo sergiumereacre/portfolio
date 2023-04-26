@@ -3,6 +3,8 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { useEffect, useRef } from "react";
+import { motion } from "framer-motion";
 import { BsFillMoonStarsFill, BsHeartFill } from "react-icons/bs";
 import { MdWbSunny } from "react-icons/md";
 import { AiFillHome } from "react-icons/ai";
@@ -35,26 +37,42 @@ function Projects(props: ProjectsProps) {
     const baseClassName = "text-slate-700 cursor-pointer text-2xl";
     const baseClassNameSun = "text-yellow-400 cursor-pointer text-3xl";
 
-    const projects = [
-        {
-            id: 1,
-            title: "Animal Kingdom - Laravel & TailwindCSS",
-            images: [AK1, AK2, AK3, AK4, AK5],
-            description: "A website that is meant to imitate LinkedIn, fully designed and implemented by me using TailwindCSS and Laravel.",
-        },
-        {
-            id: 2,
-            title: "YouTube Downloader - Python",
-            images: [YTD],
-            description: "A YouTube Downloader that allows you to download videos and audio from YouTube using Python and PyTube.",
-        },
-        {
-            id: 3,
-            title: "Zork - C++",
-            images: [Zork1, Zork2],
-            description: "A text-based adventure game that I created using Python and PyGame.",
-        }
-    ];
+    const sectionVariants = {
+        hidden: { opacity: 0, y: 50 },
+        visible: { opacity: 1, y: 0 },
+    };
+
+    const useAnimateOnScroll = () => {
+        const ref = useRef(null);
+
+        useEffect(() => {
+            const observer = new IntersectionObserver(
+                ([entry]) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate');
+                    }
+                },
+                { threshold: 0.45 }
+            );
+
+            if (ref.current) {
+                observer.observe(ref.current);
+            }
+
+            return () => {
+                if (ref.current) {
+                    observer.unobserve(ref.current);
+                }
+            };
+        }, []);
+
+        return ref;
+    };
+
+    const ref1 = useAnimateOnScroll();
+    const ref2 = useAnimateOnScroll();
+    const ref3 = useAnimateOnScroll();
+    const ref4 = useAnimateOnScroll();
 
     return (
         <div className={darkMode ? "dark" : ""}>
@@ -119,11 +137,11 @@ function Projects(props: ProjectsProps) {
             </nav>
             <main className="md:px-24 lg:px-44 xl:px-60 2xl:px-80 px-5 min-h-screen bg-lightBackground dark:bg-backgroundColor flex flex-col items-center gap-5">
                 {/* THIS SECTION DEALS WITH THE PROJECTS */}
-                <h1 className="text-3xl md:text-4xl font-bold text-center text-gray-900 dark:text-cyan-300 bg-lightContrast dark:bg-contrastBackground py-5 w-full rounded-2xl">
+                <motion.h1 ref={ref1} variants={sectionVariants} initial="hidden" animate="animate" className="my-section text-3xl md:text-4xl font-bold text-center text-gray-900 dark:text-cyan-300 bg-lightContrast dark:bg-contrastBackground py-5 w-full rounded-2xl">
                     Projects Showcase
-                </h1>
+                </motion.h1>
                 {/* ANIMAL KINGDOM */}
-                <div className="flex flex-col gap-3 text-center px-5 py-5 lg:px-12 rounded-2xl items-center bg-lightContrast dark:bg-contrastBackground">
+                <motion.section ref={ref2} variants={sectionVariants} initial="hidden" animate="animate" className="my-section flex flex-col gap-3 text-center px-5 py-5 lg:px-12 rounded-2xl items-center bg-lightContrast dark:bg-contrastBackground">
                     <h3 className="text-gray-800 text-2xl font-medium dark:text-gray-300">
                         Animal Kingdom
                     </h3>
@@ -145,9 +163,9 @@ function Projects(props: ProjectsProps) {
                             <p className="bg-green-600 rounded-md p-1 hover:animate-pulse">MySQL</p>
                         </div>
                     </div>
-                </div>
+                </motion.section>
                 {/* YTD AND ZORK */}
-                <div className="flex flex-col lg:flex-row gap-5">
+                <motion.section ref={ref3} variants={sectionVariants} initial="hidden" animate="animate" className="my-section flex flex-col lg:flex-row gap-5">
                     <div className="flex flex-col gap-3 text-center px-5 py-5 lg:px-12 rounded-2xl items-center bg-lightContrast dark:bg-contrastBackground">
                         <h3 className="text-gray-800 text-2xl font-medium dark:text-gray-300">
                             Youtube Downloader
@@ -183,9 +201,9 @@ function Projects(props: ProjectsProps) {
                             </div>
                         </div>
                     </div>
-                </div>
+                </motion.section>
                 {/* Wildlife Explore */}
-                <div className="flex flex-col gap-3 text-center px-5 py-7 lg:px-12 rounded-2xl items-center bg-lightContrast dark:bg-contrastBackground">
+                <motion.section ref={ref4} variants={sectionVariants} initial="hidden" animate="animate" className="my-section flex flex-col gap-3 text-center px-5 py-7 lg:px-12 rounded-2xl items-center bg-lightContrast dark:bg-contrastBackground">
                     <div className="flex flex-col items-center gap-5">
                         <h3 className="text-gray-800 text-2xl font-medium dark:text-gray-300">
                             Wildlife Explore
@@ -216,14 +234,14 @@ function Projects(props: ProjectsProps) {
                             </div>
                         </div>
                     </div>
-                </div>
+                </motion.section>
                 {/* THIS SECTION DEALS WITH THE FOOTER */}
-                <section className="mb-5 pr-8 flex justify-center md:justify-end bg-lightContrast dark:bg-contrastBackground rounded-2xl w-full p-5 transition ease-in-out duration-200 hover:shadow-lg hover:shadow-gray-300 dark:hover:shadow-zinc-800">
+                <motion.section initial="hidden" animate="animate" className="mb-5 pr-8 flex justify-center md:justify-end bg-lightContrast dark:bg-contrastBackground rounded-2xl w-full p-5 transition ease-in-out duration-200 hover:shadow-lg hover:shadow-gray-300 dark:hover:shadow-zinc-800">
                     <p className="flex gap-1 items-center text-gray-800 dark:text-gray-400 text-xs md:text-base">
                         Designed and implemented with{" "}
                         <BsHeartFill className="text-red-800" /> by Sergiu.
                     </p>
-                </section>
+                </motion.section>
             </main>
         </div>
     );
