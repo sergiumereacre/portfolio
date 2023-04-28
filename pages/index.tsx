@@ -14,6 +14,7 @@ import { MdWbSunny } from "react-icons/md";
 import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 import { BsPersonFillAdd } from "react-icons/bs";
 import { FaSuitcase } from "react-icons/fa";
+import { IoMail } from "react-icons/io5";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(true);
@@ -210,22 +211,30 @@ export default function Home() {
             </div>
             {/* THIS IS THE SECTION WHERE THE SOCIAL MEDIA ICONS ARE. */}
             <ul className="text-5xl flex justify-center gap-10 text-gray-600">
-              <li>
-                <a
-                  className="hover:text-blue-700 hover:transition-all hover:duration-300"
-                  href="https://www.linkedin.com/in/sergiumereacre"
-                >
-                  <AiFillLinkedin />
-                </a>
-              </li>
-              <li>
+            <motion.li whileHover={{scale: 1.05}}>
                 <a
                   className="hover:text-gray-800 hover:transition-all hover:duration-300"
                   href="https://github.com/sergiumereacre"
                 >
                   <AiFillGithub />
                 </a>
-              </li>
+              </motion.li>
+              <motion.li whileHover={{scale: 1.05}}>
+                <a
+                  className="hover:text-blue-700 hover:transition-all hover:duration-300"
+                  href="https://www.linkedin.com/in/sergiumereacre"
+                >
+                  <AiFillLinkedin />
+                </a>
+              </motion.li>
+              <motion.li whileHover={{scale: 1.05}}>
+                <a
+                  className="hover:text-red-700 hover:transition-all hover:duration-300"
+                  href="mailto:sergiumer@gmail.com"
+                >
+                  <IoMail />
+                </a>
+              </motion.li>
             </ul>
           </div>
         </motion.section>
