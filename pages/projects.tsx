@@ -137,11 +137,11 @@ function Projects(props: ProjectsProps) {
             </nav>
             <main className="md:px-24 lg:px-44 xl:px-60 2xl:px-80 px-5 min-h-screen bg-lightBackground dark:bg-backgroundColor flex flex-col items-center gap-5">
                 {/* THIS SECTION DEALS WITH THE PROJECTS */}
-                <motion.h1 ref={ref1} variants={sectionVariants} initial="hidden" animate="animate" className="my-section text-3xl md:text-4xl font-bold text-center text-gray-900 dark:text-cyan-300 bg-lightContrast dark:bg-contrastBackground py-5 w-full rounded-2xl">
+                <motion.h1 ref={ref1} variants={sectionVariants} initial="hidden" animate="animate" className="my-section text-3xl md:text-4xl font-bold text-center text-gray-900 dark:text-cyan-300 bg-lightContrast dark:bg-contrastBackground py-5 w-full rounded-2xl transition ease-in-out duration-200 hover:shadow-lg hover:shadow-gray-300 dark:hover:shadow-zinc-800">
                     Projects Showcase
                 </motion.h1>
                 {/* ANIMAL KINGDOM */}
-                <motion.section ref={ref2} variants={sectionVariants} initial="hidden" animate="animate" className="my-section flex flex-col gap-3 text-center px-5 py-5 lg:px-12 rounded-2xl items-center bg-lightContrast dark:bg-contrastBackground">
+                <motion.section ref={ref2} variants={sectionVariants} initial="hidden" animate="animate" className="my-section flex flex-col gap-3 text-center px-5 py-5 lg:px-12 rounded-2xl items-center bg-lightContrast dark:bg-contrastBackground transition ease-in-out duration-200 hover:shadow-lg hover:shadow-gray-300 dark:hover:shadow-zinc-800">
                     <h3 className="text-gray-800 text-2xl font-medium dark:text-gray-300">
                         Animal Kingdom
                     </h3>
@@ -166,7 +166,7 @@ function Projects(props: ProjectsProps) {
                 </motion.section>
                 {/* YTD AND ZORK */}
                 <motion.section ref={ref3} variants={sectionVariants} initial="hidden" animate="animate" className="my-section flex flex-col lg:flex-row gap-5">
-                    <div className="flex flex-col gap-3 text-center px-5 py-5 lg:px-12 rounded-2xl items-center bg-lightContrast dark:bg-contrastBackground">
+                    <div className="flex flex-col gap-3 text-center px-5 py-5 lg:px-12 rounded-2xl items-center bg-lightContrast dark:bg-contrastBackground transition ease-in-out duration-200 hover:shadow-lg hover:shadow-gray-300 dark:hover:shadow-zinc-800">
                         <h3 className="text-gray-800 text-2xl font-medium dark:text-gray-300">
                             Youtube Downloader
                         </h3>
@@ -182,7 +182,7 @@ function Projects(props: ProjectsProps) {
                             </div>
                         </div>
                     </div>
-                    <div className="flex flex-col gap-3 text-center px-5 py-5 lg:px-12 rounded-2xl items-center bg-lightContrast dark:bg-contrastBackground">
+                    <div className="flex flex-col gap-3 text-center px-5 py-5 lg:px-12 rounded-2xl items-center bg-lightContrast dark:bg-contrastBackground transition ease-in-out duration-200 hover:shadow-lg hover:shadow-gray-300 dark:hover:shadow-zinc-800">
                         <h3 className="text-gray-800 text-2xl font-medium dark:text-gray-300">
                             Zork Video Game
                         </h3>
@@ -203,7 +203,7 @@ function Projects(props: ProjectsProps) {
                     </div>
                 </motion.section>
                 {/* Wildlife Explore */}
-                <motion.section ref={ref4} variants={sectionVariants} initial="hidden" animate="animate" className="my-section flex flex-col gap-3 text-center px-5 py-7 lg:px-12 rounded-2xl items-center bg-lightContrast dark:bg-contrastBackground">
+                <motion.section ref={ref4} variants={sectionVariants} initial="hidden" animate="animate" className="my-section flex flex-col gap-3 text-center px-5 py-7 lg:px-12 rounded-2xl items-center bg-lightContrast dark:bg-contrastBackground transition ease-in-out duration-200 hover:shadow-lg hover:shadow-gray-300 dark:hover:shadow-zinc-800">
                     <div className="flex flex-col items-center gap-5">
                         <h3 className="text-gray-800 text-2xl font-medium dark:text-gray-300">
                             Wildlife Explore
